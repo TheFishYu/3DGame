@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <com.meizhu.a3dgame.customview.MainArticleFragmentViewPager
+            android:id="@+id/main_articlefragment_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.meizhu.a3dgame.customview.MainArticleFragmentViewPager>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@drawable/point_shape"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@drawable/point_shape"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@drawable/point_shape"/>
+
+        </LinearLayout>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/activity_main_articlefragment_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="test"/>
+</LinearLayout>
