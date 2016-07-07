@@ -9,7 +9,7 @@
         android:layout_height="140dp">
 
         <com.meizhu.a3dgame.customview.MainArticleFragmentViewPager
-            android:id="@+id/main_articlefragment_viewpager"
+            android:id="@+id/main_articlefragment_pic_viewpager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -19,7 +19,8 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
+            android:layout_gravity="bottom"
+            android:gravity="center"
             android:orientation="horizontal">
             <View
                 android:layout_width="5dp"
@@ -36,9 +37,10 @@
 
         </LinearLayout>
     </FrameLayout>
-    <TextView
-        android:id="@+id/activity_main_articlefragment_tv"
+    <ListView
+        android:id="@+id/main_articlefragment_context"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="test"/>
+        android:layout_height="match_parent">
+
+    </ListView>
 </LinearLayout>

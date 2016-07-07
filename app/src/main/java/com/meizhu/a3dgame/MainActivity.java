@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     HorizontalScrollView horizontalScrollView_top;
     RadioGroup radioGroup_top,radioGroup_bottom;
-    RadioButton rb01_top,rb02_top,rb03_top,rb04_top,rb05_top
-            ,rb06_top,rb07_top,rb08_top,rb09_top,rb10_top,rb01_bottom,
-            rb02_bottom,rb03_bottom;
+    RadioButton rb01_top,rb02_top,rb03_top,rb04_top,rb05_top,
+                rb06_top,rb07_top,rb08_top,rb09_top,rb10_top,
+                rb01_bottom, rb02_bottom,rb03_bottom;
 
     ViewPager viewPager;
     List<Fragment> fragments;
