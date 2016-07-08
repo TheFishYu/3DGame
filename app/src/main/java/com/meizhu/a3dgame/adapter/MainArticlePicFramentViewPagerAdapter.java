@@ -10,11 +10,11 @@ import java.util.List;
 /**
  * Created by Kun Yu on 2016/7/6.
  */
-public class MainArticleFramentViewPagerAdapter extends PagerAdapter{
+public class MainArticlePicFramentViewPagerAdapter extends PagerAdapter{
 
     private List<ImageView> imageViews;
 
-    public MainArticleFramentViewPagerAdapter(List<ImageView> imageViews) {
+    public MainArticlePicFramentViewPagerAdapter(List<ImageView> imageViews) {
         this.imageViews = imageViews;
     }
 

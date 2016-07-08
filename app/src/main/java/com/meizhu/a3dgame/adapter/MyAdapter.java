@@ -1,25 +1,30 @@
 package com.meizhu.a3dgame.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.meizhu.a3dgame.News;
+import com.meizhu.a3dgame.R;
+
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Kun Yu on 2016/6/25.
  */
-public class MyAdapter extends BaseAdapter {
+public class MyAdapter extends BaseAdapter implements AdapterView.OnItemClickListener{
     private Context context;
-    private List<Map<String,Object>> data;
+    private List<News> data;
     public MyAdapter() {
     }
 
-    public MyAdapter(Context context, List<Map<String, Object>> data) {
+    public MyAdapter(Context context, List<News> data) {
         this.context = context;
         this.data = data;
     }
@@ -39,34 +44,35 @@ public class MyAdapter extends BaseAdapter {
         return position;
     }
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
-    }
 
-    /*@Override
+
+    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder = null;
         if(convertView == null){
             holder = new ViewHolder();
-            convertView = View.inflate(context, R.layout.item,null);
-            holder.iv = (ImageView) convertView.findViewById(R.id.iv_second);
-            holder.tv01 = (TextView) convertView.findViewById(R.id.tv01_second);
-            holder.tv02 = (TextView) convertView.findViewById(R.id.tv02_second);
+            convertView = View.inflate(context, R.layout.article_fragment_listview_item,null);
+            holder.iv = (ImageView) convertView.findViewById(R.id.fragment_item_imageview);
+            holder.tv01 = (TextView) convertView.findViewById(R.id.fragment_item_tv1);
+            holder.tv02 = (TextView) convertView.findViewById(R.id.fragment_item_tv2);
             convertView.setTag(holder);
         }else {
             holder = (ViewHolder) convertView.getTag();
         }
-        Log.i("aaa",""+data.get(position).get("shorttitle").toString()+"");
-        holder.tv01.setText(data.get(position).get("shorttitle").toString());
-        holder.tv02.setText(data.get(position).get("description").toString());
-        Bitmap bitmap = BitmapFactory.decodeFile(data.get(position).get("litpic").toString());
+        holder.tv01.setText(data.get(position).getShorttitle().toString());
+        holder.tv02.setText(data.get(position).getDescription().toString());
+        Bitmap bitmap = BitmapFactory.decodeFile(data.get(position).getLitpic().toString());
         holder.iv.setImageBitmap(bitmap);
 
         return convertView;
-    }*/
+    }
 
-     class ViewHolder{
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    class ViewHolder{
          ImageView iv = null;
          TextView tv01 = null;
          TextView tv02 = null;

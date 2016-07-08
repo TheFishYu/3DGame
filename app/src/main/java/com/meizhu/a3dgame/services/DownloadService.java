@@ -29,6 +29,7 @@ public class DownloadService extends Service{
     NewsDao newsDao;
     NotificationManager ntfManager;
 
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -64,7 +65,7 @@ public class DownloadService extends Service{
                     Log.i("aaa","图片存储路径"+imgpath);
                     //判断SD卡是否存在该文件！！！！！！
                     //添加数据到数据库，添加成功后，发送通知
-                    newsDao.insert(data.get(i));
+                    //newsDao.insert(data.get(i));
 
                     if(i==19){
                         //发送通知

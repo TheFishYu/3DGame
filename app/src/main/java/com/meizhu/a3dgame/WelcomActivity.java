@@ -9,7 +9,6 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Toast;
 
-import com.meizhu.a3dgame.services.DownloadService;
 import com.meizhu.a3dgame.utils.NetUtils;
 
 import pl.droidsonroids.gif.GifImageView;
@@ -36,8 +35,9 @@ public class WelcomActivity extends AppCompatActivity {
                 netopen = NetUtils.netConnect(WelcomActivity.this);
                 if (netopen) {
                     //开始Service，下载数据
-                    Intent downloadServiceIntent = new Intent(WelcomActivity.this, DownloadService.class);
-                    startService(downloadServiceIntent);
+                    /*Intent downloadServiceIntent = new Intent(WelcomActivity.this, DownloadService.class);
+                    startService(downloadServiceIntent);*/
+                    Toast.makeText(WelcomActivity.this, "网络连接正常", Toast.LENGTH_SHORT).show();
                 }
             }
 

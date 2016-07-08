@@ -2,18 +2,18 @@ package com.meizhu.a3dgame.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
 import java.util.List;
 
 /**
  * Created by Kun Yu on 2016/7/6.
  */
-public class MainFragmentPagerAdapter extends FragmentPagerAdapter{
+public class MainArticleCenterFragmentPagerAdapter extends FragmentStatePagerAdapter{
 
     private List<Fragment> fragments;
 
-    public MainFragmentPagerAdapter(FragmentManager fm,List<Fragment> fragments) {
+    public MainArticleCenterFragmentPagerAdapter(FragmentManager fm, List<Fragment> fragments) {
         super(fm);
         this.fragments = fragments;
     }
