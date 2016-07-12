@@ -33,7 +33,7 @@ public class JsonUtils {
             JSONObject root = new JSONObject(json);
             JSONObject object1 = root.getJSONObject("data");
             Log.i("aaa",""+object1.length());
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 20; i++) {
                 news = new News();
                 JSONObject jsonObject = object1.getJSONObject(i+"");
 
@@ -53,6 +53,7 @@ public class JsonUtils {
             e.printStackTrace();
         }
     return data;
-
     }
+
+
 }

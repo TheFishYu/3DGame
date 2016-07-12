@@ -59,7 +59,7 @@ public class GuideActivity extends AppCompatActivity implements ViewPager.OnPage
         layoutInflater = LayoutInflater.from(this);
         View view1 = layoutInflater.inflate(R.layout.activity_guide_viewpager1,null);
         View view2 = layoutInflater.inflate(R.layout.activity_guide_viewpager2,null);
-        View view3 = layoutInflater.inflate(R.layout.activity_guide_viewpager3,null);
+        View view3 = layoutInflater.inflate(R.layout.activity_guide_viewpager1,null);
         views.add(view1);
         views.add(view2);
         views.add(view3);

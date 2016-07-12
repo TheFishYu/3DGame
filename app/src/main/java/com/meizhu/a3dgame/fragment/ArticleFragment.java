@@ -75,14 +75,16 @@ public class ArticleFragment extends Fragment implements RadioGroup.OnCheckedCha
     private void initFragment() {
         fragments = new ArrayList<>();
         //添加Fragment
-        ArticleCenterFragment f1 = new ArticleCenterFragment(1);
-        ArticleCenterFragment f2 = new ArticleCenterFragment(2);
-        ArticleCenterFragment f3 = new ArticleCenterFragment(1);
-        ArticleCenterFragment f4 = new ArticleCenterFragment(2);
-        ArticleCenterFragment f5 = new ArticleCenterFragment(1);
-        ArticleCenterFragment f6 = new ArticleCenterFragment(1);
-        ArticleCenterFragment f7 = new ArticleCenterFragment(1);
-        ArticleCenterFragment f8 = new ArticleCenterFragment(1);
+        ArticleCenterHomeFragment f1 = new ArticleCenterHomeFragment(1);
+        ArticleCenterNewsFragment f2 = new ArticleCenterNewsFragment(2);
+        ArticleCenterNewsFragment f3 = new ArticleCenterNewsFragment(151);
+        ArticleCenterNewsFragment f4 = new ArticleCenterNewsFragment(152);
+        ArticleCenterNewsFragment f5 = new ArticleCenterNewsFragment(153);
+        ArticleCenterNewsFragment f6 = new ArticleCenterNewsFragment(154);
+        ArticleCenterNewsFragment f7 = new ArticleCenterNewsFragment(196);
+        ArticleCenterNewsFragment f8 = new ArticleCenterNewsFragment(197);
+        ArticleCenterNewsFragment f9 = new ArticleCenterNewsFragment(199);
+        ArticleCenterNewsFragment f10 =new ArticleCenterNewsFragment(25);
         fragments.add(f1);
         fragments.add(f2);
         fragments.add(f3);
@@ -91,6 +93,8 @@ public class ArticleFragment extends Fragment implements RadioGroup.OnCheckedCha
         fragments.add(f6);
         fragments.add(f7);
         fragments.add(f8);
+        fragments.add(f9);
+        fragments.add(f10);
         mainArticleCenterFragmentPagerAdapter = new MainArticleCenterFragmentPagerAdapter(getFragmentManager(), fragments);
         viewPager.setAdapter(mainArticleCenterFragmentPagerAdapter);
     }
@@ -110,6 +114,35 @@ public class ArticleFragment extends Fragment implements RadioGroup.OnCheckedCha
                 viewPager.setCurrentItem(2);
                 Toast.makeText(getContext(), "top rb03", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.main_top_rb4:
+                viewPager.setCurrentItem(3);
+                Toast.makeText(getContext(), "top rb04", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.main_top_rb5:
+                viewPager.setCurrentItem(4);
+                Toast.makeText(getContext(), "top rb05", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.main_top_rb6:
+                viewPager.setCurrentItem(5);
+                Toast.makeText(getContext(), "top rb06", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.main_top_rb7:
+                viewPager.setCurrentItem(6);
+                Toast.makeText(getContext(), "top rb07", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.main_top_rb8:
+                viewPager.setCurrentItem(7);
+                Toast.makeText(getContext(), "top rb08", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.main_top_rb9:
+                viewPager.setCurrentItem(8);
+                Toast.makeText(getContext(), "top rb09", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.main_top_rb10:
+                viewPager.setCurrentItem(9);
+                Toast.makeText(getContext(), "top rb10", Toast.LENGTH_SHORT).show();
+                break;
+
         }
     }
 

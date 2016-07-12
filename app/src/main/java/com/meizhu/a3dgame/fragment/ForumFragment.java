@@ -24,8 +24,7 @@ public class ForumFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.forum_fragment, null);
-        webView = (WebView) view.findViewById(R.id.webview);
+        View view = inflater.inflate(R.layout.fragment_webview, null);
         webView = (WebView) view.findViewById(R.id.webview);
         webSettings = webView.getSettings();
         webSettings.setBuiltInZoomControls(true);

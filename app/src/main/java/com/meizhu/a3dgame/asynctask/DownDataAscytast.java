@@ -19,11 +19,11 @@ import java.util.List;
  */
 public class DownDataAscytast extends AsyncTask<String, Void, List<News>> {
     String urlPath;
-    List<News> data,data0;
+    List<News> data, data0;
     ListView listView;
     MyAdapter myAdapter;
 
-    public DownDataAscytast(ListView listView, MyAdapter myAdapter,List<News> data0) {
+    public DownDataAscytast(ListView listView, MyAdapter myAdapter, List<News> data0) {
         this.listView = listView;
         this.myAdapter = myAdapter;
         this.data0 = data0;
@@ -55,21 +55,19 @@ public class DownDataAscytast extends AsyncTask<String, Void, List<News>> {
             FileUtils.saveFile(imgdata, filename);
             String imgpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString() + "/" + filename;
             data.get(i).setLitpic(imgpath);
-            Log.i("aaa", "图片存储路径" + imgpath);
-
         }
-
+        Log.i("aaa","请求的数据大小"+data.size());
         return data;
     }
 
     @Override
     protected void onPostExecute(List<News> newses) {
         if (newses.size() == 0) {
-            Log.i("aaa", "数据唤醒出错");
-
+            Log.i("aaa", "未知错误");
         }
         data0.addAll(newses);
         myAdapter.notifyDataSetChanged();
+        Log.i("aaa","数据唤醒成功");
         super.onPostExecute(newses);
     }
 }

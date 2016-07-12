@@ -11,6 +11,7 @@ import android.widget.RadioGroup;
 
 import com.meizhu.a3dgame.fragment.ArticleFragment;
 import com.meizhu.a3dgame.fragment.ForumFragment;
+import com.meizhu.a3dgame.fragment.GameFragment;
 
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     ArticleFragment articleFragment;
     WebView webView;
 
+    GameFragment gameFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         initListener();
 
         articlePlay();
-
+//        gamePlay();
     }
 
     private void initView() {
@@ -59,22 +62,23 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         switch (checkedId) {
-
-
             case R.id.main_bottom_rb01:
                 articlePlay();
-
                 break;
             case R.id.main_bottom_rb02:
                 forumPlay();
-
-
                 break;
             case R.id.main_bottom_rb03:
-
-
+                gamePlay();
                 break;
         }
+    }
+
+    private void gamePlay() {
+        fragmentTransaction = fragmentManager.beginTransaction();
+        gameFragment = new GameFragment();
+        fragmentTransaction.replace(R.id.main_framelayout,gameFragment);
+        fragmentTransaction.commit();
     }
 
     private void forumPlay() {
